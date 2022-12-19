@@ -7,4 +7,5 @@ app.get("/", (req, res) => {
   //   res.send("Hi");
   res.render("index", { text2332: "world" });
 });
+
 app.listen(3000);
