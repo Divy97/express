@@ -9,7 +9,10 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
   // res.send("Hello about!!");
-  res.sendFile(path.join(__dirname, "./index.html"));
+  // res.sendFile(path.join(__dirname, "./index.html"));
+  res.json({
+    Name: "Divy",
+  });
 });
 
 app.listen(PORT, () => {
