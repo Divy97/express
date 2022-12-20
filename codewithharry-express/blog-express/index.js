@@ -5,10 +5,8 @@ const app = express();
 const PORT = 8080;
 
 app.use(express.static(path.join(__dirname, "static")));
+app.use("/", require(path.join(__dirname, "./Routes/blog")));
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
 app.listen(PORT, () => {
-  console.log("Running");
+  console.log(`Blog app listening at ${PORT}`);
 });
